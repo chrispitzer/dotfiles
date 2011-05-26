@@ -54,7 +54,7 @@
 " Shortcuts 
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
-let mapleader=","             " change the leader to be a comma vs slash
+" let mapleader=","             " change the leader to be a comma vs slash
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -134,6 +134,7 @@ set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+set mouse=a
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc 
@@ -207,7 +208,7 @@ set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
 """" Display
-colorscheme vividchalk
+colorscheme koehler
 
 " ==========================================================
 " Python
@@ -253,6 +254,9 @@ if 'VIRTUALENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" map kj to <Esc> to exit insert mode
+inoremap kj <Esc>
 
 " Load up virtualenv's vimrc if it exists
 if filereadable($VIRTUAL_ENV . '/.vimrc')
