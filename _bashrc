@@ -106,3 +106,6 @@ alias mi="sudo vpnc-connect meebo"
 source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=vim
+
+# update prompt with DVCS branch and venv.
+test -r ~/.updateprompt && . ~/.updateprompt
