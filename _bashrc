@@ -104,3 +104,5 @@ fi
 
 alias mi="sudo vpnc-connect meebo"
 source /usr/local/bin/virtualenvwrapper.sh
+
+export EDITOR=vim
