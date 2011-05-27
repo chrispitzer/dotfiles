@@ -1,4 +1,4 @@
-" https://github.com/sontek/dotfiles/
+\ https://github.com/sontek/dotfiles/
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -134,6 +134,7 @@ set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+set wrap
 set mouse=a
 
 " Ignore these files when completing
@@ -198,7 +199,7 @@ set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=%<%f\ (%{&ft})%=%-19(%3l,%02c%03V%)%{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
+set listchars=tab:>-,trail:-,precedes:<,extends:>
 set list
 
 """ Searching and Patterns

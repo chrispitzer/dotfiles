@@ -3,12 +3,8 @@
     directory of file type configurations and plugins
 .vimrc
     my vim configuration
-.screenrc
-    my screen configuration
-.weechat
-    my configuration for weechat, a great irc client
-.gimp
-    my tweaks/additions to gimp (fonts, brushes, etc)
+.bashrc
+    my bash configuration
 
 ## Instructions
 ### Creating source files
