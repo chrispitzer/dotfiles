@@ -109,3 +109,10 @@ export EDITOR=vim
 
 # update prompt with DVCS branch and venv.
 test -r ~/.updateprompt && . ~/.updateprompt
+
+# mount and unmount encrypted folders
+alias mountprivate="encfs /home/chris/.private-encfs /home/chris/private-encfs"
+alias unmountprivate="fusermount -u /home/chris/private-encfs"
+alias mountlofi="encfs /home/chris/.privatelofi-encfs /home/chris/privatelofi-encfs"
+alias unmountlofi="fusermount -u /home/chris/privatelofi-encfs"
+

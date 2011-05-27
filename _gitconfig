@@ -1,0 +1,7 @@
+[user]
+    name = Chris Pitzer
+    email = chris@lofiart.com
+[alias]
+    st = status -sb
+    me = log --author=Chris
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
