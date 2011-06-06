@@ -46,3 +46,6 @@
 [submodule "_vim/bundle/ropevim"]
 	path = _vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "_vim/bundle/lusty"]
+	path = _vim/bundle/lusty
+	url = https://github.com/sjbach/lusty.git

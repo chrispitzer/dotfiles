@@ -5,3 +5,9 @@
     st = status -sb
     me = log --author=Chris
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 860x534+108+75
+	main-window-view = HistoryView
+	history-view-vpane-position = 226
+	file-view-vpane-position = 190

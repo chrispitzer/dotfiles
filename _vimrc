@@ -54,9 +54,13 @@
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
 " let mapleader=","             " change the leader to be a comma vs slash
+set pastetoggle=<F2>
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
+
+" strip whitespace from document
+nmap <leader><space> :let save_cursor=getpos(".")<CR>:let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:call setpos('.', save_cursor)<CR>
 
 " Toggle the tasklist
 map <leader>td <Plug>TaskList
@@ -100,8 +104,6 @@ imap <C-W> <C-O><C-W>
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Run command-t file search
-map <leader>f :CommandT<CR>
 " Ack searching 
 nmap <leader>a <Esc>:Ack! 
 
@@ -198,8 +200,13 @@ set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=%<%f\ (%{&ft})%=%-19(%3l,%02c%03V%)%{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,trail:-,precedes:<,extends:>
+set listchars=tab:>-,precedes:<,extends:>
 set list
+
+" Highlight bad whitespace
+highlight BadWhitespace ctermbg=red guibg=red
+au BufRead,BufNewFile *.* match BadWhitespace /^\ \+/
+au BufRead,BufNewFile *.* match BadWhitespace /\s\+$/
 
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
