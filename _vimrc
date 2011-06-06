@@ -137,6 +137,7 @@ set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 set wrap
 set mouse=a
+set hidden                    " tell lusty-explorer to keep quiet about errors
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc 
