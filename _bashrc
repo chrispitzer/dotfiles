@@ -103,7 +103,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias mi="sudo vpnc-connect meebo; sshfs dev3.dev.meebo.com:/home/chrispitzer/ /home/chris/dev3"
-alias mo="fusermount -u /home/chris/dev3"
+alias mo="fusermount -uz /home/chris/dev3"
 source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=vim

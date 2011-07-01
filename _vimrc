@@ -246,10 +246,10 @@ endfunction
 au BufRead *.js set makeprg=jslint\ %
 
 " ==========================================================
-" SuperTab - Allows us to get code completion with tab
+" Wiki todo listsasdfasfd asdf asdf a s:q!
+"
 " ==========================================================
-" Try different completion methods depending on its context
-let g:SuperTabDefaultCompletionType = "context"
+map <leader>tt <Plug>VimwikiToggleListItem
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
@@ -270,3 +270,7 @@ inoremap kj <Esc>
 if filereadable($VIRTUAL_ENV . '/.vimrc')
     source $VIRTUAL_ENV/.vimrc
 endif
+
+" use spaces... except for on meebo stuff
+autocmd BufRead * set expandtab
+autocmd BufRead ~/dev3/* set noexpandtab
